@@ -10,9 +10,6 @@ const notecards = require('./NoteCards/note-cards-route')
 
 
 
-
-
-
 const app = express()
 
 const morganOption = (process.env.NODE_ENV === 'production')
