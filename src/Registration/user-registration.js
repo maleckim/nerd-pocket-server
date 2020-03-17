@@ -23,6 +23,7 @@ userRegistration
             })
         }
       })
+      .catch(next)
 
   })
 

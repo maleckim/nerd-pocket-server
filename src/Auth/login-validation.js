@@ -31,6 +31,7 @@ loginValidation
         res.status(200).json({ success: id})
         
       })
+      .catch(next)
   })
 
   module.exports = loginValidation
