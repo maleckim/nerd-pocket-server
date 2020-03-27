@@ -47,5 +47,19 @@ NotecardRouter
       })
   })
 
+NotecardRouter
+  .route('/edit')
+  .post( jsonBodyParser, (req, res, next) => {
+
+    const data = req.body;
+    const { id } = req.body;
+
+
+    NotecardService.editNotecard(req.app.get('db'), id, data)
+      .then( edit => {
+        res.status(200).end();
+      })
+  })
+
 
 module.exports = NotecardRouter

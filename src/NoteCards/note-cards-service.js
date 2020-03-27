@@ -18,7 +18,20 @@ const NotecardService = {
       .where({id})
       .del()
       
-  }
+  },
+
+  editNotecard(db, id, data){
+    const { note_id, subject, question, answer } = data;
+    
+    return db('user_notecards')
+      .where('user_id',`${id}`)
+      .andWhere('id', `${note_id}`)
+      .update({
+        subject: `${subject}`,
+        question: `${question}`,
+        answer: `${answer}`
+      })
+  },
 
 
 }

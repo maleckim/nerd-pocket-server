@@ -17,3 +17,12 @@ CREATE TABLE user_notecards (
   answer TEXT NOT NULL,
   date_created TIMESTAMP NOT NULL DEFAULT now()
 );
+
+CREATE TABLE user_notes (
+  id SERIAL,
+  user_id INTEGER REFERENCES pocket_users(id) ON DELETE SET NULL,
+  subject TEXT NOT NULL,
+  topic TEXT NOT NULL,
+  content TEXT NOT NULL,
+  date_created TIMESTAMP NOT NULL DEFAULT now()
+);

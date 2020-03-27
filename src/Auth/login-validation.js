@@ -20,12 +20,14 @@ loginValidation
       .then( pocketUser => {
         
         if(!pocketUser){
-          return res.status(404).json({error: `No user registered under '${userName}' `})
+          res.statusMessage=`No user registered under '${userName}' `
+          return res.status(404).end()
         }
         const {id, password} = pocketUser
 
         if( userPassword != password ){
-          return res.status(401).json({ error: 'Invalid password'})
+          res.statusMessage=`Invalid password`
+          return res.status(401).end()
         }
 
         res.status(200).json({ success: id})
