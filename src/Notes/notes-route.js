@@ -1,6 +1,5 @@
 const express = require('express')
 const NotesService = require('./notes-service')
-const authService = require('../Auth/auth-service')
 
 const NotesRouter = express.Router()
 const jsonBodyParser = express.json()

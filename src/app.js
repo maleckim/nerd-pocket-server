@@ -8,6 +8,7 @@ const loginValidation = require('./Auth/login-validation');
 const userRegistration = require('./Registration/user-registration')
 const notecards = require('./NoteCards/note-cards-route')
 const notes = require('./Notes/notes-route')
+const deadlines = require('./Deadlines/deadlines-route')
 
 
 
@@ -36,6 +37,7 @@ app.use('/api/validateuser', loginValidation)
 app.use('/api/adduser', userRegistration)
 app.use('/api/notecards', notecards)
 app.use('/api/notes', notes)
+app.use('/api/deadlines', deadlines)
 
 
 

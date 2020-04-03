@@ -1,5 +1,8 @@
 DROP TABLE IF EXISTS user_notecards;
+DROP TABLE IF EXISTS user_notes;
+DROP TABLE IF EXISTS user_deadlines;
 DROP TABLE IF EXISTS pocket_users;
+
 
 
 CREATE TABLE pocket_users (
@@ -25,4 +28,11 @@ CREATE TABLE user_notes (
   topic TEXT NOT NULL,
   content TEXT NOT NULL,
   date_created TIMESTAMP NOT NULL DEFAULT now()
+);
+
+CREATE TABLE user_deadlines (
+  id SERIAL,
+  user_id INTEGER REFERENCES pocket_users(id) ON DELETE SET NULL,
+  deadline TEXT NOT NULL,
+  task TEXT NOT NULL
 );
