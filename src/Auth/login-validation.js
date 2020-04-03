@@ -1,6 +1,5 @@
 const express = require('express')
 const authService = require('./auth-service')
-const bcrypt = require('bcryptjs')
 
 const loginValidation = express.Router()
 const jsonBodyParser = express.json()

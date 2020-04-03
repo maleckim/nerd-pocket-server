@@ -17,8 +17,8 @@ CREATE TABLE user_notecards (
   user_id INTEGER REFERENCES pocket_users(id) ON DELETE SET NULL,
   subject TEXT NOT NULL,
   question TEXT NOT NULL,
-  answer TEXT NOT NULL,
-  date_created TIMESTAMP NOT NULL DEFAULT now()
+  answer TEXT NOT NULL
+  
 );
 
 CREATE TABLE user_notes (
@@ -26,8 +26,8 @@ CREATE TABLE user_notes (
   user_id INTEGER REFERENCES pocket_users(id) ON DELETE SET NULL,
   subject TEXT NOT NULL,
   topic TEXT NOT NULL,
-  content TEXT NOT NULL,
-  date_created TIMESTAMP NOT NULL DEFAULT now()
+  content TEXT NOT NULL
+  
 );
 
 CREATE TABLE user_deadlines (
