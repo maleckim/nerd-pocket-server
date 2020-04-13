@@ -45,16 +45,13 @@
   <p>req.body must have id of notecard.example {id: 3}</p>
 
   <h3> EDIT /api/notecards/edit </h3>
-
-    <h4> edit existing notecard </h4>
+  <h4> edit existing notecard </h4>
     <p>req.body = {
 	"id":"2",
 	"note_id":"1",
 	"subject":"Updated",
 	"question":"new question?",
 	"answer":"new answer"
-	
-
 }</p>
 
   
@@ -62,7 +59,6 @@
   <h3>GET</h3>
   <p>req.query.userId = id , set a query named userId to equal the users id </p>
   <p>res.body = {
-
         "id": 1,
         "user_id": 1,
         "subject": "Physics",
