@@ -5,7 +5,7 @@
   <p>To install dependencies run npm install (npm i)</p>
 
 <h1>Schema</h1>
-<img src='assets/schema. PNG' alt='schema table'>
+<img src='assets/schema.PNG' alt='schema table'>
 
 <h1>Endpoints</h1>
 
@@ -24,7 +24,6 @@
   <h4>retrieve user notecards</h4>
   <p>req.query is set to User.id</p>
   <p>res.body =  {
-
         "id": 1,
         "user_id": 1,
         "subject": "Physics",
@@ -35,7 +34,6 @@
   <h3>POST</h3>
   <h4>post new notecard</h4>
   <p>req.body =  {
-
         "user_id": 1,
         "subject": "Physics",
         "question": "What is the equation for terminal velocity",
